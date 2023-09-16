@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import colors from "colors";
+import connectDB from "./config/db.js";
 
 import cors from "cors";
 

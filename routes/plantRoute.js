@@ -28,3 +28,5 @@ router.post("/create", upload.single("file"), uploadPlantController);
 export default router;
 
 router.get("/:name", getPlantController);
+
+router.post("/feedback", postFeedback);

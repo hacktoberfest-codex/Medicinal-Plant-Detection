@@ -52,3 +52,18 @@ export const uploadPlantController = async (req, res) => {
     });
   }
 };
+export const postFeedback = async (req, res) => {
+  try {
+    res.status(200).send({
+      success: true,
+      message: "upload successful",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      error,
+      message: "error in getting plant details",
+    });
+  }
+};

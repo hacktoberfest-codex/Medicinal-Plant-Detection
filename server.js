@@ -9,7 +9,7 @@ import cors from "cors";
 dotenv.config();
 
 //database config
-// connectDB();
+connectDB();
 
 //rest object
 const app = express();

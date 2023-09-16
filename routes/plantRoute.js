@@ -30,3 +30,4 @@ export default router;
 router.get("/:name", getPlantController);
 
 router.post("/feedback", postFeedback);
+router.get("/feedback", postFeedback);

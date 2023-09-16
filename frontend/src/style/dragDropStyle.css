@@ -1,0 +1,72 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+  
+  }
+  
+  section{
+    font-family: 'Montderrat', sans-serif;
+    background-color: #f7f7f7;
+    font-weight: 400;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    height: 80vh;
+  }
+  
+  .box{
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+   
+  }
+  
+  .dropzone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    border: 4px dashed rgb(117,112,112);
+    padding: 20px;
+    width: 100%; ;
+    /* position: absolute; */
+  }
+  
+  .dropzone h2{
+    color: rgb(117,112,112);
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 20px;
+  }
+  
+  button{
+    padding: 12px;
+    font-size: medium;
+    margin-top: 30px;
+  }
+  
+  
+  @media screen and (max-width: 690px){
+    .box{
+      width: 300px;
+    }
+    .dropzone{
+      padding: 10px;
+      height: 300px;
+    }
+    .dropzone h1{
+      font-size: 18px;
+    }
+    button{
+      padding: 10px;
+      font-size: smaller;
+      margin-top: 25px;
+    }
+  
+  }

@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*------------------------------------------------------------------------*/
+/*-------------------Home Page--------------------------------------------*/
+.Home{
+  background-image: url(./Assest/Background1.gif);
+}
+.content{
+  border: 10px solid #D9D9D9;
+  background-color: #D1FFBD;
+}
+.para{
+  align-items: center;
+}

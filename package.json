@@ -1,0 +1,11 @@
+{
+  "name": "Med-Plants",
+  "version": "1.0.0",
+  "description": "Hackaton Project Identification of medical plants through ML Model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TEAM-43",
+  "license": "ISC"
+}

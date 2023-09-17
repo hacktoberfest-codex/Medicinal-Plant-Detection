@@ -1,5 +1,5 @@
 # Team-43 Tech Tenets
-<center><img src="https://github.com/ITER-SIH/Team-43/assets/108077898/9536dbdc-3314-4071-99e1-2a7a4f4edc90" style="height:200px; width:390px;"></center>
+<center><img src="https://github.com/ITER-SIH/Team-43/assets/108077898/9536dbdc-3314-4071-99e1-2a7a4f4edc90" style="height:250px; width:390px;"></center>
 
 # Project:Medicinal Plant Detection Using Machine Learning
 The project aims to develop a machine learning model for the identification and classification of medicinal plants from images and create a user-friendly web application to provide valuable information about these plants.

@@ -99,13 +99,13 @@ export const getFeedback = async (req, res) => {
     });
   }
 };
-export const getImage = async (req, res) => {
+export const getResultName = async (req, res) => {
   try {
     res.status(201).send({
       success: true,
       totalCount: feed.length,
       message: "Feedback",
-      feed,
+      name,
     });
   } catch (error) {
     console.log(error);

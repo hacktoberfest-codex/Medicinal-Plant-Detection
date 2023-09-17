@@ -3,7 +3,6 @@ import "../style/responseModel.css";
 
 function ResponseModel({ LocalName, ScientificName, MedicinalFeatures, img }) {
   const features = MedicinalFeatures.split(",");
-  console.log(features);
 
   const arrayDataItems = features.map((feature) => (
     <li key={feature}>{feature}</li>

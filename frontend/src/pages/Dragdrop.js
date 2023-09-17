@@ -1,8 +1,12 @@
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import upload from "../Assets/upload_image.png";
 import "../style/dragDropStyle.css";
 import Footer from "./footer";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const thumbsContainer = {
   display: "flex",
@@ -47,11 +51,25 @@ const box = {
 
 function Dragdrop(props) {
   const [files, setFiles] = useState([]);
+  const navigate = useNavigate();
+  const getAllBenifs = async () => {
+    try {
+      const { data } = await axios.get("/api/v1/plant/mlmodel");
+      if (data?.success) {
+        navigate(`/${data.name}`);
+      } else {
+        navigate("/dragdrop");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
       "image/*": [],
     },
-    onDrop: (acceptedFiles) => {
+    onDrop: async (acceptedFiles) => {
+      getAllBenifs();
       setFiles(
         acceptedFiles.map((file) =>
           Object.assign(file, {

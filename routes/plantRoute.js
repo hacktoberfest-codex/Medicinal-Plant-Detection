@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import {
   getFeedback,
   getPlantController,
+  getResultName,
   postFeedback,
   uploadPlantController,
 } from "../controller/plantController.js";
@@ -33,3 +34,5 @@ router.get("/:name", getPlantController);
 
 router.post("/feedback", postFeedback);
 router.get("/feedback", getFeedback);
+
+router.get("/mlmodel", getResultName);

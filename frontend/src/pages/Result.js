@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Feedback from "./Feedback";
 import Footer from "./footer";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../style/responseModel.css"
 
 const Result = () => {
   
   const params = useParams();
+  const navigate = useNavigate();
   const [scientificName, setscientificName] = useState("");
   const [localName, setLocalName] = useState("");
   const [description, setDescription] = useState("");
@@ -24,6 +25,13 @@ const Result = () => {
       setDescription(data.plant.features);
       setPhoto(data.plant.photo);
       
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleClick = () => {
+    try {
+      navigate("/feedback")
     } catch (error) {
       console.log(error);
     }
@@ -68,8 +76,10 @@ const Result = () => {
           </div>
         </div>
       </div>
-
-      <Feedback />
+      <div className="d-flex justify-content-center">
+      <button type="button" className="btn btn-success btn-lg mt-3 mb-5" onClick={handleClick}>Feedback</button>
+      </div>
+      
       <Footer />
     </>
   );

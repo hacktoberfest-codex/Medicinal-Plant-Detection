@@ -5,11 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const outerContainerStyles = {
   minHeight: "60vh",
-  backgroundColor: "rgb(147,223,184)",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
+  marginBottom: "30px",
+  marginTop: "30px",
 };
 
 const innerContainerStyles = {
@@ -22,6 +23,7 @@ const innerContainerStyles = {
   flexDirection: "column",
   top: "50",
   border: "2px solid grey",
+  borderRadius: "10px",
 };
 const subContainerStyles = {
   backgroundColor: "rgb(215, 215, 217)",
@@ -33,6 +35,7 @@ const subContainerStyles = {
   flexDirection: "column",
   alignItems: "center",
   paddingLeft: "3px",
+  borderRadius: "10px",
 };
 const buttonStyle = {
   backgroundColor: "white",
@@ -53,7 +56,7 @@ const textAreaStyle = {
   padding: "8px",
   fontSize: "16px",
   border: "1px solid black",
-  borderRadius: "4px",
+  borderRadius: "10px",
 };
 
 function Feedback() {

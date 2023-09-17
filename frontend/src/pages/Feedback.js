@@ -44,46 +44,49 @@ function Feedback() {
         <Paper>
           <Container size="md">
             <Paper style={innerContainerStyles}>
-              <Paper padding="lg" style={subContainerStyles}>
+              <Paper padding="1g" style={subContainerStyles}>
                 <div>
-                  <Button
+                  <Button style={{fontSize: "xx-large"}}
                     onClick={() => handleMoodClick("😊")}
                     value={1}
-                    variant={mood === "😊" ? "filled" : "outline"}
+                    variant={mood === "😊" ? "filled" : ""}
                   >
-                    😊
+                    &#128516;
                   </Button>
-                  <Button
-                    onClick={() => handleMoodClick("😐")}
+                  <Button style={{fontSize: "xx-large"}}
+                    onClick={() => handleMoodClick("🙂")}
                     value={2}
-                    variant={mood === "😐" ? "filled" : "outline"}
+                    variant={mood === "🙂" ? "filled" : ""}
                   >
-                    😐
+                    &#128578;
                   </Button>
-                  <Button
-                    onClick={() => handleMoodClick("😠")}
+                  <Button style={{fontSize: "xx-large"}}
+                    onClick={() => handleMoodClick("😐")}
                     value={3}
-                    variant={mood === "😠" ? "filled" : "outline"}
+                    variant={mood === "😐" ? "filled" : ""}
                   >
-                    😠
+                    &#128528;
                   </Button>
-                  <Button
-                    onClick={() => handleMoodClick("😠")}
+                  <Button style={{fontSize: "xx-large"}}
+                    onClick={() => handleMoodClick("☹️")}
                     value={4}
-                    variant={mood === "😠" ? "filled" : "outline"}
+                    variant={mood === "☹️" ? "filled" : ""}
                   >
-                    😠
+                    &#9785;
                   </Button>
-                  <Button
-                    onClick={() => handleMoodClick("😠")}
+                  <Button style={{fontSize: "xx-large"}}
+                    onClick={() => handleMoodClick("😣")}
                     value={5}
-                    variant={mood === "😠" ? "filled" : "outline"}
+                    variant={mood === "😣" ? "filled" : ""}
                   >
-                    😠
+                    &#128547;
                   </Button>
                 </div>
+                <br />
                 <div>
-                  <p>Selected Mood: {mood}</p>
+                  <p style={{fontSize: "large", fontWeight: "bold"}}>
+                    Selected Mood: {mood}
+                  </p>
                 </div>
               </Paper>
               <Paper padding="lg" style={subContainerStyles}>

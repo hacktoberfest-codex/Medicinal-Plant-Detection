@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import axios from "axios";
+import { useState } from "react";
 import { useDropzone } from "react-dropzone";
+import { useNavigate } from "react-router-dom";
 import upload from "../Assets/upload_image.png";
 import "../style/dragDropStyle.css";
 import Footer from "./footer";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const thumbsContainer = {
   display: "flex",
@@ -39,12 +39,9 @@ const img = {
 
 const container = {
   width: "900px",
+  height: "500px",
   marginTop: "50px",
   marginBottom: "50px",
-};
-
-const box = {
-  border: "1px solid lightblue",
 };
 
 function Dragdrop(props) {

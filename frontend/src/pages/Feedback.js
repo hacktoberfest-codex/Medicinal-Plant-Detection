@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Container, Paper, Button } from "@mantine/core";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const outerContainerStyles = {
   minHeight: "60vh",
@@ -64,6 +66,20 @@ function Feedback() {
   const handleFeedbackChange = (e) => {
     setFeedback(e.target.value);
   };
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const { data } = await axios.post("/api/v1/plant/feedback", {
+        score: mood,
+        description: feedback,
+      });
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div style={outerContainerStyles}>
       <Container size="lg">
@@ -127,6 +143,13 @@ function Feedback() {
                 placeholder="Enter your feedback here..."
                 style={textAreaStyle}
               ></textarea>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleSubmit}
+              >
+                Submit
+              </button>
             </Paper>
           </Paper>
         </Container>

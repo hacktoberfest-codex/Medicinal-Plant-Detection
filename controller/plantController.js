@@ -2,12 +2,11 @@ import plantModel from "../models/plantModel.js";
 import fs from "fs";
 import csv from "csvtojson";
 import feedbackModel from "../models/feedbackModel.js";
-import { plantClasses } from "./classes.js";
 
 export const getPlantController = async (req, res) => {
   try {
     const { name } = req.params;
-
+    console.log(name);
     const plant = await plantModel.findOne({ scientificName: name });
     res.status(201).send({
       success: true,
@@ -156,7 +155,7 @@ export const getResultName = async (req, res) => {
       let scores = await tf.softmax(predictions).data();
       index = scores.indexOf(Math.max(...scores));
       const name = plantClasses[index];
-      console.log(name);
+
       res.status(201).send({
         success: true,
         totalCount: feed.length,

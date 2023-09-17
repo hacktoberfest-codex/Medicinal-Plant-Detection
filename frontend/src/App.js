@@ -9,7 +9,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/result/:slug" element={<Result />} />
         <Route path="/dragdrop" element={<Dragdrop />} />
       </Routes>
     </>

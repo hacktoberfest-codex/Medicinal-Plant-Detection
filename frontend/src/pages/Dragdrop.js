@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-import Footer from "./Footer.js";
-import { useState } from "react";
-import { useDropzone } from "react-dropzone";
-import "../style/dragDropStyle.css";
-=======
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import upload from "../Assets/upload_image.png";
 import "../style/dragDropStyle.css";
 import Footer from "./footer";
->>>>>>> upstream/Anushka
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const thumbsContainer = {
   display: "flex",
@@ -50,16 +45,29 @@ const container = {
 
 const box = {
   border: "1px solid lightblue",
-
 };
 
 function Dragdrop(props) {
   const [files, setFiles] = useState([]);
+  const navigate = useNavigate();
+  const getAllBenifs = async () => {
+    try {
+      const { data } = await axios.get("/api/v1/plant/mlmodel");
+      if (data?.success) {
+        navigate(`/${data.name}`);
+      } else {
+        navigate("/dragdrop");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
       "image/*": [],
     },
-    onDrop: (acceptedFiles) => {
+    onDrop: async (acceptedFiles) => {
+      getAllBenifs();
       setFiles(
         acceptedFiles.map((file) =>
           Object.assign(file, {
@@ -91,13 +99,15 @@ function Dragdrop(props) {
       <section className="container" style={container}>
         <div {...getRootProps({ className: "dropzone" })}>
           <input {...getInputProps()} />
-          <img src={upload} alt="upload" style={{width: 60}}/>
+          <img src={upload} alt="upload" style={{ width: 60 }} />
           <h2>
             Click here to add files <br />
             or
             <br /> Drag & Drop files here
           </h2>
-          <button class="btn btn-outline-info" style={{marginTop: 0}}>Browse Files</button>
+          <button class="btn btn-outline-info" style={{ marginTop: 0 }}>
+            Browse Files
+          </button>
         </div>
         <aside style={thumbsContainer}>{thumbs}</aside>
       </section>

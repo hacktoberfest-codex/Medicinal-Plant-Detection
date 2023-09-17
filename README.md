@@ -13,6 +13,9 @@ Gather a diverse dataset of images of medicinal plants. The dataset should inclu
 # Machine Learning Model:
 Train a machine learning model (e.g., convolutional neural network) using the collected dataset. The model's primary task is to classify images of medicinal plants into their respective species or categories. 
 
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/86767343-8662-43af-96ab-ad242e5f3888" style="height:300px;width:600px;">
+
+
 # Web Application Development:
 Create a web application that allows users to upload images of medicinal plants or enter descriptions. The application should offer the following features:
 

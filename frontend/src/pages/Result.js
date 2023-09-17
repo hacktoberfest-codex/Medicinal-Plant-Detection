@@ -1,8 +1,7 @@
+import axios from "axios";
 import React from "react";
 import Feedback from "./Feedback";
 import Footer from "./footer";
-import { Button } from "bootstrap";
-import axios from "axios";
 
 const Result = () => {
   const name = "Amomum longiligulare";

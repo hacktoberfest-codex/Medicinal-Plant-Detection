@@ -12,7 +12,7 @@ import logo from "../Assets/Logo.png";
 const outerContainerStyles = {
   // minHeight: "20vh",
   padding: "20px",
-  backgroundColor: "#086729",
+  backgroundColor: "#0C4E23",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -31,7 +31,7 @@ const Footer = () => {
     <div style={outerContainerStyles}>
       <Container>
         <Paper>
-          <Group position="center" style={{ backgroundColor: "#086729" }}>
+          <Group position="center" style={{ backgroundColor: "#0C4E23" }}>
             <Button
               component="a"
               href="https://www.instagram.com"

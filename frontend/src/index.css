@@ -28,7 +28,7 @@ code {
   box-shadow: -10px 5px 10px black;
   width: 1000px;
   height: auto;
-  padding-bottom:20px;
+  padding: 20px;
 }
 .title h1{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

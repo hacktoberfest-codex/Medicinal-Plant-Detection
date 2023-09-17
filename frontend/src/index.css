@@ -17,14 +17,18 @@ code {
 /*------------------------------------------------------------------------*/
 /*-------------------Home Page--------------------------------------------*/
 .Home{
-  padding: 80px 240px;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .content{
   border: 35px solid #D9D9D9;
   background-color: #D1FFBD;
   box-shadow: -10px 5px 10px black;
   width: 1000px;
-  height: 650px;
+  height: auto;
+  padding-bottom:20px;
 }
 .title h1{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

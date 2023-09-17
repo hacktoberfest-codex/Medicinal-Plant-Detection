@@ -44,7 +44,7 @@ function Feedback() {
         <Paper>
           <Container size="md">
             <Paper style={innerContainerStyles}>
-              <Paper padding="lg" style={subContainerStyles}>
+              <Paper padding="1g" style={subContainerStyles}>
                 <div>
                   <Button
                     onClick={() => handleMoodClick("😊")}
@@ -82,6 +82,7 @@ function Feedback() {
                     😠
                   </Button>
                 </div>
+                <br />
                 <div>
                   <p>Selected Mood: {mood}</p>
                 </div>

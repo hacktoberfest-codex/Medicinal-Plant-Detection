@@ -17,7 +17,16 @@ const Home = () => {
     <div className="Home">
       <div className="content">
         <div className="title">
-          <h1>Medicinal Plant Detection: The Future of Herbal Medicine</h1>
+          <h1
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontWeight: "bolder",
+              fontSize: "4rem",
+            }}
+          >
+            Medicinal Plant Detection: The Future of Herbal Medicine
+          </h1>
         </div>
         <div className="para">
           <p>

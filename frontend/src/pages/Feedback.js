@@ -1,9 +1,8 @@
+import { Button, Container, Paper } from "@mantine/core";
 import React, { useState } from "react";
-import { Container, Paper, Button } from "@mantine/core";
 
 const outerContainerStyles = {
   minHeight: "60vh",
-  backgroundColor: "rgb(147,223,184)",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./Assets/background1.jpeg");
+  background-size: cover;
 }
 
 code {
@@ -15,12 +17,39 @@ code {
 /*------------------------------------------------------------------------*/
 /*-------------------Home Page--------------------------------------------*/
 .Home{
-  background-image: url(./Assest/Background1.gif);
+  padding: 80px 240px;
 }
 .content{
-  border: 10px solid #D9D9D9;
+  border: 35px solid #D9D9D9;
   background-color: #D1FFBD;
+  box-shadow: -10px 5px 10px black;
+  width: 1000px;
+  height: 650px;
+}
+.title h1{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-image: url( "https://rare-gallery.com/uploads/posts/582448-banana-leaf.jpg");
+  background-size: cover;
+  padding: 20px;
+  font-size: 70px;
+}
+.content img{
+  width: 930px;
+  height: 350px;
 }
 .para{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  padding: 20px 20px 0px;
+}
+.foot{
+  position: relative;
+  bottom: 40px;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.foot img{
+  margin-left: 150px;
 }

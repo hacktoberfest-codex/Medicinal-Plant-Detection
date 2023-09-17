@@ -1,16 +1,16 @@
-import React from "react";
-import { Container, Paper, Group, Button, Text } from "@mantine/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faFacebook,
   faInstagram,
   faTwitter,
-  faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Container, Group, Paper, Text } from "@mantine/core";
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 
 const outerContainerStyles = {
   minHeight: "40vh",
-  backgroundColor: "green",
+  backgroundColor: "#086729",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -25,7 +25,7 @@ const Footer = () => {
     <div style={outerContainerStyles}>
       <Container>
         <Paper>
-          <Group position="center" style={{ backgroundColor: "green" }}>
+          <Group position="center" style={{ backgroundColor: "#086729" }}>
             <Button
               component="a"
               href="https://www.instagram.com"

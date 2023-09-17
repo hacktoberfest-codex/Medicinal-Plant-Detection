@@ -1,6 +1,7 @@
 import React from "react";
-import Footer from "./Footer";
 import Feedback from "./Feedback";
+import Footer from "./footer";
+
 const Result = () => {
   return (
     <>

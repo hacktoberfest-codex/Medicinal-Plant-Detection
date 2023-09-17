@@ -1,5 +1,5 @@
 # Team-43 Tech Tenets
-<center><img src="https://github.com/ITER-SIH/Team-43/assets/108077898/66c4c8a8-6709-4991-ba4f-daf2807d2044" style="height:250px; width:350px;"></center>
+<center><img src="https://github.com/ITER-SIH/Team-43/assets/108077898/9536dbdc-3314-4071-99e1-2a7a4f4edc90" style="height:200px; width:390px;"></center>
 
 # Project:Medicinal Plant Detection Using Machine Learning
 The project aims to develop a machine learning model for the identification and classification of medicinal plants from images and create a user-friendly web application to provide valuable information about these plants.
@@ -30,5 +30,17 @@ Provide educational resources on the web application to help users learn about m
 
 This project not only serves as a valuable tool for plant enthusiasts, herbalists, and researchers but also contributes to the conservation and sustainable use of medicinal plants.
 
+# Website:
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/2c2d2606-8e48-4406-b1fe-4f826a97256a" Style="height:400px;width:590px;">
+
+# Tech Stack Used:
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/5f2da726-e655-4050-b1e3-703a10a1f102" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/3a1228eb-87ec-4e59-b0a3-6b7e7e5c987c" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/f8ff4dbe-984b-4594-ba6d-7b4bf36ceb31" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/d7b0981b-0e2d-41bf-aee7-ee949b007aed" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/2bfbffa1-9f69-4122-b156-3fdf4d1d1be5" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/031ac0d6-6835-4af1-baea-745b782bb82c" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/218e0ef9-656b-4ed0-a162-fd6fe270ca2f" style="width:50px;height:50px;">
+<img src="https://github.com/ITER-SIH/Team-43/assets/108077898/50cb03dc-2bc4-469b-bc0b-a144c434c5be" style="width:50px;height:50px;">
 
 

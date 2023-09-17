@@ -6,7 +6,7 @@ import feedbackModel from "../models/feedbackModel.js";
 export const getPlantController = async (req, res) => {
   try {
     const { name } = req.params;
-
+    console.log(name);
     const plant = await plantModel.findOne({ scientificName: name });
     res.status(201).send({
       success: true,
@@ -101,12 +101,68 @@ export const getFeedback = async (req, res) => {
 };
 export const getResultName = async (req, res) => {
   try {
-    res.status(201).send({
-      success: true,
-      totalCount: feed.length,
-      message: "Feedback",
-      name,
+    async function loadImage(file) {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const img = new Image();
+          img.onload = () => resolve(tf.browser.fromPixels(img));
+          img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function preprocessImage(image) {
+      const resizedImage = tf.image.resizeBilinear(image, [128, 128]); // Adjust size if necessary
+      return resizedImage;
+    }
+
+    // Setting up tfjs with the model we downloaded
+    tf.loadGraphModel("model1/model.json").then(function (model) {
+      window.model = model;
     });
+
+    var predict = function (input) {
+      if (window.model) {
+        window.model
+          .predict([tf.tensor(input).reshape([28, 28, 1])])
+          .array()
+          .then(function (scores) {
+            scores = scores[0];
+            predicted = scores.indexOf(Math.max(...scores));
+          });
+      } else {
+        // The model takes a bit to load,
+        // if we are too fast, wait
+        setTimeout(function () {
+          predict(input);
+        }, 50);
+      }
+    };
+    const file = req.body;
+    if (file) {
+      // Read and preprocess the selected image
+      const image = await loadImage(file);
+      let tensor = preprocessImage(image);
+
+      // let tensor = image;
+      tensor = tf.expandDims(tensor, 0);
+
+      // Make predictions using the model
+      // console.log(model);
+      const predictions = await model.predict(tensor);
+      let scores = await tf.softmax(predictions).data();
+      index = scores.indexOf(Math.max(...scores));
+      const name = plantClasses[index];
+
+      res.status(201).send({
+        success: true,
+        totalCount: feed.length,
+        message: "Feedback",
+        name,
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(500).send({

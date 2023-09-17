@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const plantSchema = new mongoose.Schema(
+const feedbackSchema = new mongoose.Schema(
   {
     score: {
       type: String,
@@ -12,4 +12,4 @@ const plantSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("plantdata", plantSchema);
+export default mongoose.model("feed", feedbackSchema);

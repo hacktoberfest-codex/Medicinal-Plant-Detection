@@ -1,9 +1,10 @@
 .response-block{
     margin:50px auto 10px;
-    background-color: white;
+    background-color: #d1ffdb;
     color: black;
     height: 40vh;
     width: 60vw;
+    border: 15px solid #d9d9d9;
     border-radius: 10px;
   }
   

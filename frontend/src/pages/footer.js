@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Container, Group, Paper, Text } from "@mantine/core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import logo from "../Assets/Logo.png";
+import { Link } from "react-router-dom";
 
 const outerContainerStyles = {
   minHeight: "40vh",
@@ -19,6 +21,27 @@ const outerContainerStyles = {
 const iconStyle = {
   display: "inline-block",
   verticalAlign: "middle",
+};
+const box = {
+  width: "120px",
+  height: "70px",
+};
+const ulStyle = {
+  listStyle: "none",
+  display: "flex",
+  padding: 0,
+  justifyContent: "center",
+};
+
+const liStyle = {
+  marginRight: "20px",
+  display: "inline-block",
+};
+
+const linkStyle = {
+  textDecoration: "none",
+  color: "white",
+  fontWeight: "bold",
 };
 const Footer = () => {
   return (
@@ -59,13 +82,37 @@ const Footer = () => {
           </Group>
         </Paper>
 
-        <Text className="text-center mt-3" color="white">
+        {/* <Text className="text-center mt-3" color="white">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero,
           aspernatur.
-        </Text>
+        </Text> */}
         <Text className="text-center mt-3" color="white">
           Copyright &copy; 2023
         </Text>
+        <center>
+          <nav className="mt-2">
+            <ul style={ulStyle}>
+              <li style={liStyle}>
+                <Link to="/" style={linkStyle}>
+                  . Home
+                </Link>
+              </li>
+              <li style={liStyle}>
+                <Link to="/dragdrop" style={linkStyle}>
+                  . Browse
+                </Link>
+              </li>
+              <li style={liStyle}>
+                <Link to="/feedback" style={linkStyle}>
+                  . Feedback
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </center>
+        <center class="mt-3">
+          <img src={logo} alt="logo" style={box} />
+        </center>
       </Container>
     </div>
   );

@@ -1,7 +1,7 @@
 import Footer from "./Footer.js";
-import "../style/dragDropStyle.css";
 import { useState } from "react";
 import { useDropzone } from "react-dropzone";
+import "../style/dragDropStyle.css";
 
 const thumbsContainer = {
   display: "flex",
@@ -62,9 +62,9 @@ function Dragdrop(props) {
           src={file.preview}
           style={img}
           // Revoke data uri after image is loaded
-          onLoad={() => {
-            URL.revokeObjectURL(file.preview);
-          }}
+          //   onLoad={() => {
+          //     URL.revokeObjectURL(file.preview);
+          //   }}
           alt={file.name}
         />
       </div>

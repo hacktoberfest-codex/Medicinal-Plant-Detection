@@ -2,7 +2,9 @@ import express from "express";
 import multer from "multer";
 import bodyParser from "body-parser";
 import {
+  getFeedback,
   getPlantController,
+  postFeedback,
   uploadPlantController,
 } from "../controller/plantController.js";
 
@@ -30,4 +32,4 @@ export default router;
 router.get("/:name", getPlantController);
 
 router.post("/feedback", postFeedback);
-router.get("/feedback", postFeedback);
+router.get("/feedback", getFeedback);

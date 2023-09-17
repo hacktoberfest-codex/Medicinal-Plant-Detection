@@ -57,10 +57,10 @@ export const postFeedback = async (req, res) => {
   try {
     const { score, description } = req.body; //req.fileds
     if (!score) {
-      return res.send({ message: "Name is required!" });
+      return res.send({ message: "Score is required!" });
     }
     if (!description) {
-      return res.send({ message: "Speciality is required!" });
+      return res.send({ message: "Description is required!" });
     }
     const feed = await new feedbackModel({
       score,
@@ -84,6 +84,23 @@ export const postFeedback = async (req, res) => {
 export const getFeedback = async (req, res) => {
   try {
     const feed = await feedbackModel.find({}).sort({ createdAt: -1 });
+    res.status(201).send({
+      success: true,
+      totalCount: feed.length,
+      message: "Feedback",
+      feed,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      error,
+      message: "error in getting feedback",
+    });
+  }
+};
+export const getImage = async (req, res) => {
+  try {
     res.status(201).send({
       success: true,
       totalCount: feed.length,

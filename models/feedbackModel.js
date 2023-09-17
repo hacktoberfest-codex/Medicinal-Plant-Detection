@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const plantSchema = new mongoose.Schema(
   {
     score: {
-      type: number,
+      type: String,
     },
     description: {
       type: String,

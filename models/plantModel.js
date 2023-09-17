@@ -21,4 +21,4 @@ const plantSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("plantdata", plantSchema);
+export default mongoose.model("plantFeatures", plantSchema);

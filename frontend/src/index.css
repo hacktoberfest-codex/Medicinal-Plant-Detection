@@ -43,8 +43,6 @@ code {
   padding: 20px 20px 0px;
 }
 .foot{
-  position: relative;
-  bottom: 40px;
   padding: 0px 50px;
   display: flex;
   justify-content: space-between;

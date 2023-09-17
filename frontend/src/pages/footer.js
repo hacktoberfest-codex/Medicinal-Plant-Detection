@@ -7,9 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Container, Group, Paper, Text } from "@mantine/core";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import logo from "../Assets/Logo.png";
 
 const outerContainerStyles = {
-  minHeight: "40vh",
+  // minHeight: "20vh",
+  padding: "20px",
   backgroundColor: "#086729",
   display: "flex",
   alignItems: "center",
@@ -20,6 +22,10 @@ const iconStyle = {
   display: "inline-block",
   verticalAlign: "middle",
 };
+const box = {
+  width: "120px",
+  height: "70px",
+}
 const Footer = () => {
   return (
     <div style={outerContainerStyles}>
@@ -66,6 +72,7 @@ const Footer = () => {
         <Text className="text-center mt-3" color="white">
           Copyright &copy; 2023
         </Text>
+        <center class="mt-3"><img  src={logo} alt="logo" style={box} /></center>
       </Container>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../Assets/Logo.png";
 import Typewriter from "./Typewriter";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const Home = () => {
           >
             Try It
           </button>
-          <img src={logo} alt="Logo" style={{ width: 200, height: 200 }} />
+          <img src={logo} alt="Logo" style={{ width: 100, height: 50 }} />
         </div>
       </div>
     </div>

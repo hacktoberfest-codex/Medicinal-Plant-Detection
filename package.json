@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "frontend": "npm start --prefix ./frontend",
+    "dev": "concurrently \"npm run start\" \"npm run frontend\""
   },
   "author": "TEAM-43",
   "license": "ISC",
@@ -13,8 +15,10 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mantine/core": "^6.0.20",
+    "@tensorflow/tfjs": "^4.11.0",
     "bootstrap": "^5.3.2",
     "colors": "^1.4.0",
+    "concurrently": "^8.2.1",
     "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
     "dotenv": "^16.3.1",

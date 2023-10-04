@@ -1,0 +1,37 @@
+.response-block{
+    margin:50px auto 10px;
+    background-color: #d1ffdb;
+    color: black;
+    height: 40vh;
+    width: 60vw;
+    border: 15px solid #d9d9d9;
+    border-radius: 10px;
+  }
+  
+  .response-block h1{
+    position: relative;
+    top: 10px;
+    padding: 0px auto;
+    text-align: center;
+    
+  }
+  
+  .response-content{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 30px;
+  }
+  
+  .img{
+    width: 150px;
+    height: 150px;
+  }
+  
+  .img img{
+    width: 150px;
+    height: 150px;
+  }

@@ -48,7 +48,7 @@ const Footer = () => {
     <div style={outerContainerStyles}>
       <Container>
         <Paper>
-          <Group position="center" style={{ backgroundColor: "#086729" }}>
+          <Group position="center" style={{ backgroundColor: "#086729" }} >
             <Button
               component="a"
               href="https://www.instagram.com"
@@ -90,7 +90,7 @@ const Footer = () => {
           Copyright &copy; 2023
         </Text>
         <center>
-          <nav className="mt-2">
+          <nav className="mt-2 pt-2 pl-3 pb-0 mb-1 bg-green-900 rounded-md text-center flex justify-center items-center ">
             <ul style={ulStyle}>
               <li style={liStyle}>
                 <Link to="/" style={linkStyle}>

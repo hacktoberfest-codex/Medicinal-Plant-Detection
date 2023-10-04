@@ -82,10 +82,7 @@ const Footer = () => {
           </Group>
         </Paper>
 
-        {/* <Text className="text-center mt-3" color="white">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero,
-          aspernatur.
-        </Text> */}
+
         <Text className="text-center mt-3" color="white">
           Copyright &copy; 2023
         </Text>
